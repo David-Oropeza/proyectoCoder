@@ -1,0 +1,88 @@
+$primary: #09AC7B;
+$white-card: #D1D2D3;
+$color-text: black;
+
+//importando Bootstrap
+@import "../bootstrap/scss/bootstrap";
+
+//------------------------------------------------------------
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    background-image: url(../img/fondo.jpeg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center; /*centrar img*/
+    background-size: cover; /*toma todo el espacio disponible*/
+    background-attachment: fixed; 
+}
+
+#menu {
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+}
+
+.website-title{
+    font-family: 'Shadows Into Light Two', sans-serif;
+    font-size: 50px;
+}
+a{
+    color: $white-card;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.nav-link{
+    &:hover{
+        color: $primary;
+    }
+    &.active{
+        color: $primary;
+    }
+}
+p{
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.nav, items-nav{
+    text-transform: uppercase;
+}
+
+
+
+//---------Estilos Cards---------------------------------
+
+.products-masonry{
+    .card{
+        text-align: center;
+        border: none;
+        margin-bottom: 40px;
+        h5{
+            text-transform: uppercase;
+            font-weight: 300;
+            
+            &::before{
+                content: '';
+                display: block;
+                width: 70px;
+                height: 2px;
+                margin: 15px auto 30px;
+            }
+        }
+        p{  
+            color: $color-text;
+            font-weight: 500;
+        }
+    }
+}
+.jumbotron{
+    background: $white-card;
+}
+
+//-------------------Scrollpy--------------------------
+body{
+    position: relative;
+    
+}
